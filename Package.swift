@@ -8,16 +8,13 @@ let package = Package(
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "E2EESPM",
-            targets: ["E2EESPM"]),
+            name: "pse2ee",
+            targets: ["pse2ee"]),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "E2EESPM"),
-        .testTarget(
-            name: "E2EESPMTests",
-            dependencies: ["E2EESPM"]),
+        .binaryTarget(name: "pse2ee",
+                      path: "./E2EE/pse2ee.xcframework.zip"),
     ]
 )
